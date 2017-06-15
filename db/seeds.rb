@@ -14,7 +14,7 @@ end
 
 new_kudos_needed.times do
    kudo = { user_name: Faker::Name.name, subject: Faker::Book.title, description: Faker::Name.title, applause: rand(1..20) }
-   kudo = Kudo.new(user)
+   kudo = Kudo.new(kudo)
    kudo.save
 end
 
