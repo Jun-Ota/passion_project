@@ -1,3 +1,4 @@
+require 'bcrypt'
 class User < ActiveRecord::Base
   # Remember to create a migration!
   validates :user_name, :uniqueness => true, :presence => true

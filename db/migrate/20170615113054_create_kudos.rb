@@ -1,6 +1,6 @@
 class CreateKudos < ActiveRecord::Migration
   def change
-    create_kudos :users do |t|
+    create_table :kudos do |t|
       t.string :user_name, :null => false
       t.string :subject, :null => false
       t.string :description, :null => false
