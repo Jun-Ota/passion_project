@@ -1,22 +1,17 @@
 class Slack
   def initialize
-    client = SimpleSlack::Client.new(ENV["SLACK"])
+    @client = SimpleSlack::Client.new(ENV["SLACK"])
+    @channels = @client.get.channels
+    @users = @client.get.users
   end
 
-  def get_all_channels
-    client.get.channels
-  end
-
-  def get_all_users
-    client.get.users
-  end
 
   def get_channel(channel_id)
     client.get.channel("channel_id")
     # => { id: "channel_id", name: "channel_name" }
   end
 
-  def  get_channel(channel_name)
+  def get_channel(channel_name)
     client.get.channel("channel_name")
     # => { id: "channel_id", name: "channel_name" }
   end
@@ -32,4 +27,6 @@ class Slack
     # needs to be in string
   end
 
+
+# <%= @client.post.channel(to: "sea-lions-general", text: "hello world", name: "real peter pushing to master") %>
 end

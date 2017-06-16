@@ -1,0 +1,17 @@
+<p>Go to <a href="/slacks/users">Users</a></p>
+
+<h2>Kudos!</h2>
+<p><a href="/kudos">Kudos</a></p>
+<p><a href="/kudos/new">Create a Kudo!</a></p>
+
+<h2> All the Channels in SF </h2>
+<% @channels.each  do |channel| %>
+ <li> Channel: <%= channel[:name] %> <br>
+<% end %>
+
+
+
+<h2>User Authorization</h2>
+<p><a href="/users/new">Sign Up</a></p>
+<p><a href="/login">Login</a></p>
+
