@@ -9,8 +9,8 @@ post '/users' do
     login(@user)
     redirect "users/#{@user.id}"
   else
-    @errors = @user.error.full_messages
-    redirect "/users/new"
+    @errors = @user.errors.full_messages
+    erb:'users/new_html'
   end
 end
 

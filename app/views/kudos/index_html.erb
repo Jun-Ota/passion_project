@@ -1,8 +1,5 @@
-<% if @kudo %>
-  <h1>All Kudos </h1>
-<% else %>
-  <h1>All The Kudos</h1>
-<% end %>
+<h1>All The Kudos</h1>  <%= erb :"_link_html"  %>
+
 <!-- interesting if we can show the recent kudos. ranking. or by cohort -->
 <ul>
   <% @kudos.each do |kudo| %>
@@ -10,15 +7,16 @@
   <li>Subject: <%= kudo.subject %> </li>
   <li>Description: <%= kudo.description %> </li>
 
-
   <% if logged_in?  %>
   <form method="post" action="/kudos/<%= kudo.id %>">
-  <input type="hidden" name="_method" value="delete">
-  <input type="submit" value="DELETE">
-  <a href="/kudos/<%= kudo.id %>/edit">Edit</a>
-   <a href="/kudos/<%= kudo.id %>">Detail</a>
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="DELETE">
   </form>
+  <a href="/kudos/<%= kudo.id %>/edit">Edit</a>
+  <a href="/kudos/<%= kudo.id %>">Detail</a>
   <% end  %>
 
   <% end %>
 </ul>
+
+

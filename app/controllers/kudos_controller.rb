@@ -22,7 +22,7 @@ get '/kudos/:id' do
   erb :'kudos/show_html'
 end
 
-get '/kuedos/:id/edit' do
+get '/kudos/:id/edit' do
   @kudo = Kudo.find(params[:id])
   erb :'kudos/edit_html'
 end
