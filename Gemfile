@@ -11,8 +11,11 @@ gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
 
 gem 'rake'
+gem 'bcrypt'
+gem 'simple_slack'
 
 gem 'shotgun', '~>0.9.1'
+gem 'dotenv'
 
 group :test do
   gem 'shoulda-matchers'

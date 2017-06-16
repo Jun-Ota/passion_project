@@ -1,0 +1,20 @@
+<h1>Sign Up</h1>
+<%= erb :"_errors_html"  %>
+<form id="sign-up" method="post" action="/users">
+  <p>
+    <label for="user_name">User Name:</label>
+    <input class="form-control" type="text" name="user[user_name]">
+  </p>
+  <p>
+    <label for="Email">Email:</label>
+    <input class="form-control" type="text" name="user[email]">
+  </p>
+  <p>
+    <label for="password">Password:</label>
+    <input class="form-control" type="password" name="user[password]">
+  </p>
+  <!-- BUTTON -->
+  <input class="btn btn-primary" type="submit" value="Sign Up" class="button">
+</form>
+
+<p><a href="/">Home</a></p>

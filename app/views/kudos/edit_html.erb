@@ -1,0 +1,25 @@
+<h1> Edit Below </h1>
+
+<%= erb :"_errors_html"  %>
+
+<form method="post" action="/kudos/<%= @kudo.id %>">
+  <input type="hidden" name="_method" value="put">
+
+  <label>Kudos To</label>
+  <input type="text" name="kudo[user_name]" value="<%= @kudo.user_name %>">
+
+  <label>Subject</label>
+  <input type="text" name="kudo[subject]"value="<%= @kudo.subject %>">
+
+  <label>Description</label>
+  <input type="text" name="kudo[description]"value="<%= @kudo.description %>">
+
+  <label>Applause</label>
+  <input type="text" name="kudo[applause]"value="<%= @kudo.applause %>">
+
+  <input type="submit" value="Edit">
+</form>
+
+
+<p><a href="/">Home</a></p>
+<p><a href="/kudos">Kudos</a></p>

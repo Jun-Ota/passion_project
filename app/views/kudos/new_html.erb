@@ -1,0 +1,33 @@
+<h1>Add a New Kudo Below</h1>
+
+<%= erb :"_errors_html"  %>
+
+<form method="post" action="/kudos">
+   <label>Kudos To</label>
+   <input type="text" name="kudo[user_name]">
+   <br>
+   <br>
+   <br>
+<form method="post" action="/kudos">
+   <label>Kudos About</label>
+   <input type="text" name="kudo[subject]">
+   <br>
+   <br>
+   <br>
+<form method="post" action="/kudos">
+   <label>Kudos Descritpion</label>
+   <input type="text" name="kudo[description]">
+   <br>
+   <br>
+   <br>
+<form method="post" action="/kudos">
+   <label>Applause</label>
+   <input type="text" name="kudo[applause]">
+   <br>
+   <br>
+   <br>
+<input type="submit" value="Add">
+</form>
+
+
+<p><a href="/">Home</a></p>

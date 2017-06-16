@@ -1,0 +1,16 @@
+<% if @kudo %>
+<h1>Kudos To <%= @kudo.user_name %></h1>
+
+<ul>
+ <li>Subject - <%= @kudo.subject %></li>
+ <li>Description - <%= @kudo.description %></li>
+ <li>Applause - <%= @kudo.applause %></li>
+</ul>
+
+<a href="/kudos/<%= @kudo.id %>/edit">Edit</a>
+<% else %>
+  <h1>That does not exist!!!</h1>
+<% end %>
+
+
+<p><a href="/">Home</a></p>
